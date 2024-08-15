@@ -1,113 +1,192 @@
-import Image from "next/image";
 
+const services = [{ name: 'Graphic design', image: '', description: 'We offer excellent graphic design services at affordable prices to transform your brand.' },
+{ name: 'Printing', image: '', description: 'We offer excellent and quality printing services at affordable prices to transform your brand.' },
+{ name: 'Branding', image: '', description: 'We offer excellent and unique branding services at affordable prices to transform your brand.' },
+{ name: 'UI/UX design', image: '', description: 'We offer excellent UI/UX design services at affordable prices to transform your brand.' },
+{ name: 'Website design', image: '', description: 'We offer excellent and unique branding services at affordable prices to transform your brand.' },
+{ name: 'Digital marketing', image: '', description: 'We offer excellent and digital marketing services at affordable prices to transform your brand.' }
+]
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+  return (<>
+    <header>
+      <nav className="flex gap-10">
+        <span>Logo</span>
+
+        {/* links */}
+        <ul className="flex">
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+        <a href="#project-form" className="btn">Discuss a project</a>
+      </nav>
+    </header>
+    <main>
+      <section>
+
+        <div>
+          <div>
+            <h1><span>Improve your sales,</span>
+              Get <span>unique designs</span> for your brand.</h1>
+            <p>We offer excellent digital services at affordable prices to assist you in transforming your brand into a global competitor.</p>
+            <a href="project-form">Discuss a project</a>
+          </div>
+        </div>
+        <div>hero image</div>
+      </section>
+
+      <section>
+        <div>
+          <h2>What we do</h2>
+          <p>We offer excellent digital services at affordable prices to assist you in transforming your brand into a global competitor.</p>
+        </div>
+        <div>
+          {services.map((service) => (
+            <div key={service.name}>
+              <div>image</div>
+              <h3>{service.name}</h3>
+              <p>{service.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section>
+        <div>
+          <h2>View our works</h2>
+          <p>Check our porfolio. We offer excellent digital services at affordable prices to assist you in transforming your brand into a global competitor.</p>
+        </div>
+        <div>
+          <div>image</div>
+          <div><h3>We design, code, print, develop, and market digitally for brands.
+
+          </h3>
+            <p>We design aesthetically pleasing website, print, and develop mobile app to provide effective solutions for brands. </p>
+            <a href="#" className="btn">View our works</a>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Discuss a project</h2>
+        <p>Give us details of your work and let’s get started</p>
+
+        <form action="discuss">
+          <div>
+
+
+            <label htmlFor="name">
+              <span>Name</span>
+              <input type="text" name="name" id="name" placeholder="Your name" />
+            </label>
+            <label htmlFor="company">
+              <span>Company</span>
+              <input type="text" name="company" id="company" placeholder="Your company" />
+            </label>
+            <label htmlFor="email">
+              <span>Email</span>
+              <input type="email" name="email" id="email" placeholder="Your email" />
+            </label>
+            <label htmlFor="message">
+              <span>Message</span>
+              <textarea name="message" id="message" placeholder="Your message"></textarea>
+            </label>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+      <section id="recent">
+        <h2>Recent works</h2>
+        <p>Check out some of recent work. Give us details of your work and let’s get started</p>
+        <div>images grid</div>
+        <a href="#">View all works</a>
+      </section>
+      <section id="reviews">
+        <h2>Client reviews</h2>
+        <p>1000+ satisfied clients comments. Give us details of your work and let’s get started</p>
+        <div>
+          <div>svg with negative right margin</div>
+          <div>
+
+            <h3>Client name</h3>
+            <p>We offer excellent digital services at affordable
+              prices to assist you in transforming your brand
+              into a global competitor.</p>
+            <div>avatar</div>
+            <div>stars</div>
+          </div>
+          <div>svg with negative left margin</div>
+
+        </div>
+      </section>
+      <section id="blog">
+        <h2>News & updates</h2>
+        <p>View our updated blog posts. 1000+ satisfied clients comments. Give us details of your work and let’s get started</p>
+        <div>
+          <article>
+            <div>image</div>
+            <h3>Graphic Design layout in the modern
+              day economical status</h3>
+            <div>By {"Kehinde Musa"} on <time dateTime="2024-03-24">{"MarchMarch 24, 2024"}</time>.</div>
+            <p>Graphic design is a creative art which principles can
+              never be over emphasized in the modern day economy.
+              Technology has developed various software that can
+              be easily used to design graphic elements in easier and
+              more professional ways.</p>
+          </article>
+        </div>
+      </section>
+      <section id="blog">
+        <h2>Let's get started</h2>
+        <p>View our updated blog posts. 1000+ satisfied clients comments. Give us details of your work and let’s get started</p>
+        <a href="#discuss" className="btn">Discuss a project</a>
+      </section>
+    </main>
+    <footer>
+      Footer
+
+      <div>
+        <div>
+          <div>logo</div>
+          <p>We offer excellent digital services at affordable
+            prices to assist you in transforming your brand
+            into a global competitor. We offer excellent
+            digital services at affordable prices to assist
+            you in transforming your brand into a global
+            competitor.</p>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">Graphic design</a></li>
+            <li><a href="#">Printing</a></li>
+            <li><a href="#">Branding</a></li>
+            <li><a href="#">UI/UX design</a></li>
+            <li><a href="#">Website design</a></li>
+            <li><a href="#">Digital marketing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">Company</a></li>
+            <li><a href="#">Client</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get in touch</h4>
+          <ul>
+            <li><a href="#">Phone</a></li>
+            <li><a href="#">Email</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Linkedin</a></li>
+            <li><a href="#">WhatsApp</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
         </div>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <p>© {new Date().getFullYear()} Lativity. All rights reserved</p>
+    </footer>
+  </>
   );
 }
