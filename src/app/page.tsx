@@ -1,15 +1,17 @@
+import Image from "next/image";
+import LinkButton from "./components/ui/link-button";
 
-const services = [{ name: 'Graphic design', image: '', description: 'We offer excellent graphic design services at affordable prices to transform your brand.' },
-{ name: 'Printing', image: '', description: 'We offer excellent and quality printing services at affordable prices to transform your brand.' },
-{ name: 'Branding', image: '', description: 'We offer excellent and unique branding services at affordable prices to transform your brand.' },
-{ name: 'UI/UX design', image: '', description: 'We offer excellent UI/UX design services at affordable prices to transform your brand.' },
-{ name: 'Website design', image: '', description: 'We offer excellent and unique branding services at affordable prices to transform your brand.' },
-{ name: 'Digital marketing', image: '', description: 'We offer excellent and digital marketing services at affordable prices to transform your brand.' }
+const services = [{ name: 'Graphic design', image: '/images/services_graphic-design.png', description: 'We offer excellent graphic design services at affordable prices to transform your brand.' },
+{ name: 'Printing', image: '/images/services_printing.png', description: 'We offer excellent and quality printing services at affordable prices to transform your brand.' },
+{ name: 'Branding', image: '/images/services_branding.png', description: 'We offer excellent and unique branding services at affordable prices to transform your brand.' },
+{ name: 'UI/UX design', image: '/images/services_ui-ux-design.png', description: 'We offer excellent UI/UX design services at affordable prices to transform your brand.' },
+{ name: 'Website design', image: '/images/services_web-design.png', description: 'We offer excellent and unique branding services at affordable prices to transform your brand.' },
+{ name: 'Digital marketing', image: '/images/services_digital-marketing.png', description: 'We offer excellent and digital marketing services at affordable prices to transform your brand.' }
 ]
 export default function Home() {
   return (<>
     <header>
-      <nav className="flex gap-10">
+      <nav className="hidden md:flex gap-10 items-center">
         <span>Logo</span>
 
         {/* links */}
@@ -22,32 +24,39 @@ export default function Home() {
       </nav>
     </header>
     <main>
-      <section>
-
-        <div>
-          <div>
-            <h1><span>Improve your sales,</span>
-              Get <span>unique designs</span> for your brand.</h1>
+      <section className="py-10">
+        <div className="section__container flex flex-col md:flex-row items-center gap-10">
+          <div className="md:w-1/2">
+            <h1 className="text-4xl"><span className="text-l_orange font-bold">Improve your sales,</span><br />
+              Get <span className="text-l_blue font-bold">unique designs</span> for your brand.</h1>
             <p>We offer excellent digital services at affordable prices to assist you in transforming your brand into a global competitor.</p>
-            <a href="project-form">Discuss a project</a>
+            <LinkButton href="#project-form" className="mt-10 block md:w-fit">Discuss a project</LinkButton>
+          </div>
+          <div>
+            <Image src='/images/hero-image.png' alt='man with laptop' width={500} height={500} />
           </div>
         </div>
-        <div>hero image</div>
       </section>
 
-      <section>
-        <div>
-          <h2>What we do</h2>
-          <p>We offer excellent digital services at affordable prices to assist you in transforming your brand into a global competitor.</p>
-        </div>
-        <div>
-          {services.map((service) => (
-            <div key={service.name}>
-              <div>image</div>
-              <h3>{service.name}</h3>
-              <p>{service.description}</p>
-            </div>
-          ))}
+      <section className="py-10">
+        <div className="section__container">
+          <div className="text-center">
+            <h2 className="section__heading--main">What we do?</h2>
+            <h3 className="section__heading--sub">Services we can help you with</h3>
+            {/* <p>We offer excellent digital services at affordable prices to assist you in transforming your brand into a global competitor.</p> */}
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10 justify-center">
+            {services.map((service) => (
+              <div key={service.name} className="flex flex-col">
+                <div className="w-full h-64 relative">
+                  {/* full width image */}
+                  <Image src={service.image} alt={service.name} layout="fill" className="object-cover" />
+                </div>
+                <h4 className="card__heading">{service.name}</h4>
+                <p className="card__description w-full">{service.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
       <section>
@@ -68,11 +77,8 @@ export default function Home() {
       <section>
         <h2>Discuss a project</h2>
         <p>Give us details of your work and let’s get started</p>
-
-        <form action="discuss">
+        <form action="project-form">
           <div>
-
-
             <label htmlFor="name">
               <span>Name</span>
               <input type="text" name="name" id="name" placeholder="Your name" />
@@ -105,7 +111,6 @@ export default function Home() {
         <div>
           <div>svg with negative right margin</div>
           <div>
-
             <h3>Client name</h3>
             <p>We offer excellent digital services at affordable
               prices to assist you in transforming your brand
@@ -114,7 +119,6 @@ export default function Home() {
             <div>stars</div>
           </div>
           <div>svg with negative left margin</div>
-
         </div>
       </section>
       <section id="blog">
@@ -135,7 +139,7 @@ export default function Home() {
         </div>
       </section>
       <section id="blog">
-        <h2>Let's get started</h2>
+        <h2>Let&apos;s get started</h2>
         <p>View our updated blog posts. 1000+ satisfied clients comments. Give us details of your work and let’s get started</p>
         <a href="#discuss" className="btn">Discuss a project</a>
       </section>
