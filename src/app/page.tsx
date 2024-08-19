@@ -27,9 +27,9 @@ export default function Home() {
       <section className="py-10">
         <div className="section__container flex flex-col md:flex-row items-center gap-10">
           <div className="md:w-1/2">
-            <h1 className="text-4xl"><span className="text-l_orange font-bold">Improve your sales,</span><br />
+            <h1 className="text-3xl md:text-6xl"><span className="text-l_orange font-bold">Improve your sales,</span><br />
               Get <span className="text-l_blue font-bold">unique designs</span> for your brand.</h1>
-            <p>We offer excellent digital services at affordable prices to assist you in transforming your brand into a global competitor.</p>
+            <p className="mt-10 text-xl">We offer excellent digital services at affordable prices to assist you in transforming your brand into a global competitor.</p>
             <LinkButton href="#project-form" className="mt-10 block md:w-fit">Discuss a project</LinkButton>
           </div>
           <div>
@@ -45,7 +45,7 @@ export default function Home() {
             <h3 className="section__heading--sub">Services we can help you with</h3>
             {/* <p>We offer excellent digital services at affordable prices to assist you in transforming your brand into a global competitor.</p> */}
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10 justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 mt-10 justify-center">
             {services.map((service) => (
               <div key={service.name} className="flex flex-col">
                 <div className="w-full h-64 relative">
@@ -59,45 +59,53 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section>
-        <div>
-          <h2>View our works</h2>
-          <p>Check our porfolio. We offer excellent digital services at affordable prices to assist you in transforming your brand into a global competitor.</p>
+      <section className="py-10">
+        <div className="section__container">
+          <div className="text-center">
+            <h2 className="section__heading--main">View our works</h2>
+            <p className="section__heading--sub">Check our porfolio. Lorem ipsum dolor sit.</p>
+          </div>
         </div>
-        <div>
-          <div>image</div>
-          <div><h3>We design, code, print, develop, and market digitally for brands.
-
-          </h3>
-            <p>We design aesthetically pleasing website, print, and develop mobile app to provide effective solutions for brands. </p>
-            <a href="#" className="btn">View our works</a>
+        <div className="section__container flex flex-col-reverse md:flex-row gap-10 mt-20 items-center">
+          <div>
+            <Image src='/images/portfolio-section-image.png' width={548} height={485} alt='' />
+          </div>
+          <div className="md:w-1/2 flex flex-col gap-6">
+            <h3 className="text-4xl font-bold">We <span className="text-l_blue">design</span>, <span className="text-l_blue">develop</span>, and <span className="text-l_blue">market online</span> for brands.
+            </h3>
+            <p className="text-xl">
+              We design aesthetically pleasing website, print, and develop mobile app to provide effective solutions for brands.
+            </p>
+            <LinkButton href="#" className="block w-fit">View our works</LinkButton>
           </div>
         </div>
       </section>
-      <section>
-        <h2>Discuss a project</h2>
-        <p>Give us details of your work and let’s get started</p>
-        <form action="project-form">
-          <div>
-            <label htmlFor="name">
-              <span>Name</span>
-              <input type="text" name="name" id="name" placeholder="Your name" />
-            </label>
-            <label htmlFor="company">
-              <span>Company</span>
-              <input type="text" name="company" id="company" placeholder="Your company" />
-            </label>
-            <label htmlFor="email">
-              <span>Email</span>
-              <input type="email" name="email" id="email" placeholder="Your email" />
-            </label>
-            <label htmlFor="message">
-              <span>Message</span>
-              <textarea name="message" id="message" placeholder="Your message"></textarea>
-            </label>
-          </div>
-          <button type="submit">Submit</button>
-        </form>
+      <section id='project-form' className='py-10 bg-l_blue text-white'>
+        <div className="section__container">
+          <h2 className="text-xl text-center">Discuss a project</h2>
+          <p className="text-3xl text-center font-bold">Give us details of your work and let’s get started</p>
+          <form action="project-form">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center mx-auto">
+              <label htmlFor="name">
+                <div>Name</div>
+                <input type="text" name="name" id="name" placeholder="Your name" />
+              </label>
+              <label htmlFor="company">
+                <div>Company</div>
+                <input type="text" name="company" id="company" placeholder="Your company" />
+              </label>
+              <label htmlFor="email">
+                <span>Email</span>
+                <input type="email" name="email" id="email" placeholder="Your email" />
+              </label>
+              <label htmlFor="message">
+                <span>Message</span>
+                <textarea name="message" id="message" placeholder="Your message"></textarea>
+              </label>
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
       </section>
       <section id="recent">
         <h2>Recent works</h2>
