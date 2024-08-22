@@ -4,6 +4,14 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+import ProjectsCarousel from "./components/sections/ProjectsCarousel";
 
 const services = [{ name: 'Graphic design', image: '/images/services_graphic-design.png', description: 'We offer excellent graphic design services at affordable prices to transform your brand.' },
 { name: 'Printing', image: '/images/services_printing.png', description: 'We offer excellent and quality printing services at affordable prices to transform your brand.' },
@@ -12,9 +20,12 @@ const services = [{ name: 'Graphic design', image: '/images/services_graphic-des
 { name: 'Website design', image: '/images/services_web-design.png', description: 'We offer excellent and unique branding services at affordable prices to transform your brand.' },
 { name: 'Digital marketing', image: '/images/services_digital-marketing.png', description: 'We offer excellent and digital marketing services at affordable prices to transform your brand.' }
 ]
+
+
 export default function Home() {
   return (<>
     <header>
+
       <nav className="hidden md:flex gap-10 items-center">
         <span>Logo</span>
 
@@ -116,12 +127,14 @@ export default function Home() {
           </form>
         </div>
       </section>
-      <section id="recent">
+      <section id="recent" className="py-10">
         <div className="section__container">
-          <h2 className="section__heading--main">Recent works</h2>
-          <p className="section__heading--sub">Check out some of recent work. Give us details of your work and let’s get started</p>
-          <div>images grid</div>
-          <a href="#">View all works</a>
+          <div className="text-center">
+            <h2 className="section__heading--main">Recent works</h2>
+            <p className="section__heading--sub mx-auto w-full md:w-1/2">Check out some of recent work. Give us details of your work and let’s get started</p>
+          </div>
+          <div className="mt-10"><ProjectsCarousel /></div>
+          <a href="#" className="block w-fit mx-auto mt-10 bg-l_blue text-white px-10 py-5 rounded-md">View all works</a>
         </div>
       </section>
       <section id="reviews">
