@@ -12,6 +12,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import ProjectsCarousel from "./components/sections/ProjectsCarousel";
+import StarRating from "./components/ui/star-rating";
 
 const services = [{ name: 'Graphic design', image: '/images/services_graphic-design.png', description: 'We offer excellent graphic design services at affordable prices to transform your brand.' },
 { name: 'Printing', image: '/images/services_printing.png', description: 'We offer excellent and quality printing services at affordable prices to transform your brand.' },
@@ -96,7 +97,7 @@ export default function Home() {
         </div>
       </section>
       <section id='project-form' className='py-10 bg-l_blue text-white'>
-        <div className="section__container w-full md:w-[70rem]">
+        <div className="section__container w-full md:max-w-[70rem]">
           <h2 className="text-xl text-center">Discuss a project</h2>
           <p className="text-3xl text-center font-bold">Give us details of your work and let’s get started</p>
           <form className="mt-10">
@@ -137,21 +138,28 @@ export default function Home() {
           <a href="#" className="block w-fit mx-auto mt-10 bg-l_blue text-white px-10 py-5 rounded-md">View all works</a>
         </div>
       </section>
-      <section id="reviews">
-        <h2>Client reviews</h2>
-        <p>1000+ satisfied clients comments. Give us details of your work and let’s get started</p>
-        <div>
-          <div>svg with negative right margin</div>
-          <div>
-            <h3>Client name</h3>
-            <p>We offer excellent digital services at affordable
-              prices to assist you in transforming your brand
-              into a global competitor.</p>
-            <div>avatar</div>
-            <div>stars</div>
-          </div>
-          <div>svg with negative left margin</div>
+      <section id="reviews" className="py-10">
+
+        <div className="text-center">
+          <h2 className="section__heading--main">Client reviews</h2>
+          <p className="section__heading--sub mx-auto w-full md:w-1/2">1000+ satisfied clients comments. Give us details of your work and let’s get started</p>
         </div>
+        <div className="flex items-center justify-between">
+          <div className="hidden md:block w-1/3 h-[24rem] md:h-[650px] bg-[url('/images/reviews-left-bg.png')] bg-no-repeat bg-contain bg-left md:-mr-10 -mb-20"></div>
+          <div className="mt-10 mx-auto w-96 p-3 md:p-6">
+            <div className="flex flex-col gap-2 md:gap-5 items-center">
+              <h3 className="text-l_blue font-semibold">Client name</h3>
+              <p className="text-xl">We offer excellent digital services at affordable prices to assist you in transforming your brand into a global competitor.</p>
+              <div><Image src="/images/sample-review-avatar.png" alt="client" width={100} height={100} /></div>
+              <div><StarRating rating={5} /></div>
+            </div>
+          </div>
+          <div className="hidden md:block w-1/3 h-[24rem] md:h-[650px] bg-[url('/images/reviews-right-bg.png')] bg-no-repeat bg-contain bg-right md:-ml-10 -mt-20"></div>
+
+        </div>
+
+
+
       </section>
       <section id="blog">
         <h2>News & updates</h2>
@@ -175,7 +183,7 @@ export default function Home() {
         <p>View our updated blog posts. 1000+ satisfied clients comments. Give us details of your work and let’s get started</p>
         <a href="#discuss" className="btn">Discuss a project</a>
       </section>
-    </main>
+    </main >
     <footer>
       Footer
 
