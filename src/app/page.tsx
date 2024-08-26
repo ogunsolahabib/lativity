@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/carousel"
 import ProjectsCarousel from "./components/sections/ProjectsCarousel";
 import StarRating from "./components/ui/star-rating";
+import BlogArticleCard from "./components/ui/blog-article-card";
 
 const services = [{ name: 'Graphic design', image: '/images/services_graphic-design.png', description: 'We offer excellent graphic design services at affordable prices to transform your brand.' },
 { name: 'Printing', image: '/images/services_printing.png', description: 'We offer excellent and quality printing services at affordable prices to transform your brand.' },
@@ -138,8 +139,7 @@ export default function Home() {
           <a href="#" className="block w-fit mx-auto mt-10 bg-l_blue text-white px-10 py-5 rounded-md">View all works</a>
         </div>
       </section>
-      <section id="reviews" className="py-10">
-
+      <section id="reviews" className="py-10 bg-[#F8F8FD]">
         <div className="text-center">
           <h2 className="section__heading--main">Client reviews</h2>
           <p className="section__heading--sub mx-auto w-full md:w-1/2">1000+ satisfied clients comments. Give us details of your work and let’s get started</p>
@@ -157,26 +157,21 @@ export default function Home() {
           <div className="hidden md:block w-1/3 h-[24rem] md:h-[650px] bg-[url('/images/reviews-right-bg.png')] bg-no-repeat bg-contain bg-right md:-ml-10 -mt-20"></div>
 
         </div>
-
-
-
       </section>
-      <section id="blog">
-        <h2>News & updates</h2>
-        <p>View our updated blog posts. 1000+ satisfied clients comments. Give us details of your work and let’s get started</p>
-        <div>
-          <article>
-            <div>image</div>
-            <h3>Graphic Design layout in the modern
-              day economical status</h3>
-            <div>By {"Kehinde Musa"} on <time dateTime="2024-03-24">{"MarchMarch 24, 2024"}</time>.</div>
-            <p>Graphic design is a creative art which principles can
-              never be over emphasized in the modern day economy.
-              Technology has developed various software that can
-              be easily used to design graphic elements in easier and
-              more professional ways.</p>
-          </article>
+      <section id="blog" className="py-10 bg-l_blue text-white">
+        <div className="section__container">
+          <div className="text-center">
+            <h2 className="text-xl">News & updates</h2>
+            <p className="text-3xl font-semibold mx-auto w-full md:w-1/2">View our updated blog posts. 1000+ satisfied clients comments.</p>
+          </div>
+          <div className="mt-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 lg:gap-20 justify-center mx-auto max-w-5xl">
+              <BlogArticleCard />
+              <BlogArticleCard />
+            </div>
+          </div>
         </div>
+
       </section>
       <section id="blog">
         <h2>Let&apos;s get started</h2>
