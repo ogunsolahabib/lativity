@@ -71,17 +71,21 @@
 .section__container {
   @apply container mx-auto;
   }
-  .section__heading--main {
+.section__heading--main {
     @apply text-xl text-l_blue;
   }
-  .section__heading--sub {
+.section__heading--sub {
     @apply text-3xl text-l_black font-semibold;
   }
   
-  .card__heading{
+.card__heading {
     @apply text-l_blue font-bold my-2
   }
   
-  .card__description{
+.card__description {
     @apply text-l_black my-2
   }
+
+.btn--primary {
+  @apply block w-full md:w-fit mx-auto mt-10 bg-l_blue text-white text-center px-10 py-5 rounded-md
+}

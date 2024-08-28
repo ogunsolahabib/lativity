@@ -14,6 +14,9 @@ import {
 import ProjectsCarousel from "./components/sections/ProjectsCarousel";
 import StarRating from "./components/ui/star-rating";
 import BlogArticleCard from "./components/ui/blog-article-card";
+import DotsInSquareBlue from "./components/svg/dots-in-square-blue";
+import BottomBannerShapesLeft from "./components/svg/bottom-banner-shapes-left";
+import BottomBannerShapesRight from "./components/svg/bottom-banner-shapes-right";
 
 const services = [{ name: 'Graphic design', image: '/images/services_graphic-design.png', description: 'We offer excellent graphic design services at affordable prices to transform your brand.' },
 { name: 'Printing', image: '/images/services_printing.png', description: 'We offer excellent and quality printing services at affordable prices to transform your brand.' },
@@ -165,18 +168,29 @@ export default function Home() {
             <p className="text-3xl font-semibold mx-auto w-full md:w-1/2">View our updated blog posts. 1000+ satisfied clients comments.</p>
           </div>
           <div className="mt-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 lg:gap-20 justify-center mx-auto max-w-5xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-10 lg:gap-20 justify-center mx-auto max-w-5xl">
               <BlogArticleCard />
               <BlogArticleCard />
             </div>
           </div>
         </div>
-
       </section>
-      <section id="blog">
-        <h2>Let&apos;s get started</h2>
-        <p>View our updated blog posts. 1000+ satisfied clients comments. Give us details of your work and let’s get started</p>
-        <a href="#discuss" className="btn">Discuss a project</a>
+      <section id="blog" className="py-10 relative overflow-hidden border-y-[4rem] border-white bg-[#F8F8FD]">
+        <DotsInSquareBlue className="absolute -top-12 left-20 w-20 h-20 rotate-45 -z-0" />
+        <DotsInSquareBlue className="absolute bottom-2 -right-10 w-20 h-20 -rotate-45 -z-0" />
+        <div className="section__container">
+          <div className="relative">
+            <BottomBannerShapesLeft className="hidden md:block w-1/5 h-auto aspect-[13/10] absolute left-20 top-0 bottom-0" />
+            <div className="max-w-[56rem] mx-auto">
+              <div className="text-center mt-5 md:mt-0">
+                <h2 className="section__heading--main">Let&apos;s get started</h2>
+                <p className="text-xl mx-auto w-full md:w-1/2">View our updated blog posts. 1000+ satisfied clients comments.</p>
+              </div>
+              <a href="#project-form" className="btn--primary">Discuss a project</a>
+            </div>
+            <BottomBannerShapesRight className="hidden md:block w-1/5 h-auto aspect-[14/10] absolute right-20 top-0 bottom-0" />
+          </div>
+        </div>
       </section>
     </main >
     <footer>

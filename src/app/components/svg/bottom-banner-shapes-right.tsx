@@ -1,4 +1,4 @@
-export default function BottomBannerShapesRight() {
+export default function BottomBannerShapesRight(props: React.SVGProps<SVGSVGElement>) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -6,6 +6,7 @@ export default function BottomBannerShapesRight() {
             height="139"
             fill="none"
             viewBox="0 0 204 139"
+            {...props}
         >
             <circle cx="43.196" cy="97.607" r="4.637" fill="#F69001"></circle>
             <circle cx="177.366" cy="20.235" r="6.665" fill="#006"></circle>
