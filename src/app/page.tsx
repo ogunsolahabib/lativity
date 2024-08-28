@@ -17,6 +17,7 @@ import BlogArticleCard from "./components/ui/blog-article-card";
 import DotsInSquareBlue from "./components/svg/dots-in-square-blue";
 import BottomBannerShapesLeft from "./components/svg/bottom-banner-shapes-left";
 import BottomBannerShapesRight from "./components/svg/bottom-banner-shapes-right";
+import Footer from "./components/ui/footer";
 
 const services = [{ name: 'Graphic design', image: '/images/services_graphic-design.png', description: 'We offer excellent graphic design services at affordable prices to transform your brand.' },
 { name: 'Printing', image: '/images/services_printing.png', description: 'We offer excellent and quality printing services at affordable prices to transform your brand.' },
@@ -70,7 +71,7 @@ export default function Home() {
               <div key={service.name} className="flex flex-col">
                 <div className="w-full h-64 relative">
                   {/* full width image */}
-                  <Image src={service.image} alt={service.name} layout="fill" className="object-cover" />
+                  <Image src={service.image} alt={service.name} fill className="object-cover" />
                 </div>
                 <h4 className="card__heading">{service.name}</h4>
                 <p className="card__description w-full">{service.description}</p>
@@ -193,53 +194,7 @@ export default function Home() {
         </div>
       </section>
     </main >
-    <footer>
-      Footer
-
-      <div>
-        <div>
-          <div>logo</div>
-          <p>We offer excellent digital services at affordable
-            prices to assist you in transforming your brand
-            into a global competitor. We offer excellent
-            digital services at affordable prices to assist
-            you in transforming your brand into a global
-            competitor.</p>
-        </div>
-        <div>
-          <h4>Services</h4>
-          <ul>
-            <li><a href="#">Graphic design</a></li>
-            <li><a href="#">Printing</a></li>
-            <li><a href="#">Branding</a></li>
-            <li><a href="#">UI/UX design</a></li>
-            <li><a href="#">Website design</a></li>
-            <li><a href="#">Digital marketing</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Company</h4>
-          <ul>
-            <li><a href="#">Company</a></li>
-            <li><a href="#">Client</a></li>
-            <li><a href="#">Team</a></li>
-            <li><a href="#">Careers</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Get in touch</h4>
-          <ul>
-            <li><a href="#">Phone</a></li>
-            <li><a href="#">Email</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Linkedin</a></li>
-            <li><a href="#">WhatsApp</a></li>
-            <li><a href="#">Facebook</a></li>
-          </ul>
-        </div>
-      </div>
-      <p>© {new Date().getFullYear()} Lativity. All rights reserved</p>
-    </footer>
+    <Footer />
   </>
   );
 }

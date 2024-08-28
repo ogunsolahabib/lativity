@@ -4,7 +4,7 @@ export default function BlogArticleCard() {
     return <article>
         <div className="flex flex-col gap-2 md:gap-5">
             <div className="relative w-full h-[300px]">
-                <Image src="/images/project-1.png" alt="blog" layout="fill" className="object-cover" />
+                <Image src="/images/project-1.png" alt="blog" fill className="object-cover" />
             </div>
             <h3 className="font-semibold text-2xl">Graphic Design layout in the modern
                 day economical status</h3>
