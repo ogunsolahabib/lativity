@@ -1,5 +1,5 @@
 import Image from "next/image";
-import LinkButton from "./components/ui/link-button";
+import LinkButton from "../components/ui/link-button";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
@@ -11,13 +11,14 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import ProjectsCarousel from "./components/sections/ProjectsCarousel";
-import StarRating from "./components/ui/star-rating";
-import BlogArticleCard from "./components/ui/blog-article-card";
-import DotsInSquareBlue from "./components/svg/dots-in-square-blue";
-import BottomBannerShapesLeft from "./components/svg/bottom-banner-shapes-left";
-import BottomBannerShapesRight from "./components/svg/bottom-banner-shapes-right";
-import Footer from "./components/ui/footer";
+import ProjectsCarousel from "../components/sections/ProjectsCarousel";
+import StarRating from "../components/ui/star-rating";
+import BlogArticleCard from "../components/ui/blog-article-card";
+import DotsInSquareBlue from "../components/svg/dots-in-square-blue";
+import BottomBannerShapesLeft from "../components/svg/bottom-banner-shapes-left";
+import BottomBannerShapesRight from "../components/svg/bottom-banner-shapes-right";
+import Footer from "../components/ui/footer";
+import Navbar from "@/components/sections/navbar";
 
 const services = [{ name: 'Graphic design', image: '/images/services_graphic-design.png', description: 'We offer excellent graphic design services at affordable prices to transform your brand.' },
 { name: 'Printing', image: '/images/services_printing.png', description: 'We offer excellent and quality printing services at affordable prices to transform your brand.' },
@@ -31,18 +32,7 @@ const services = [{ name: 'Graphic design', image: '/images/services_graphic-des
 export default function Home() {
   return (<>
     <header>
-
-      <nav className="hidden md:flex gap-10 items-center">
-        <span>Logo</span>
-
-        {/* links */}
-        <ul className="flex">
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
-        </ul>
-        <a href="#project-form" className="btn">Discuss a project</a>
-      </nav>
+      <Navbar />
     </header>
     <main>
       <section className="py-10">
