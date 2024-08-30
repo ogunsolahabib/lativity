@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${monteserrat.className} text-l_black`}>{children}</body>
+      <body className={`${monteserrat.className} text-l_black overflow-x-hidden`}>{children}</body>
     </html>
   );
 }

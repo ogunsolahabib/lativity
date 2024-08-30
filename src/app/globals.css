@@ -87,5 +87,5 @@
   }
 
 .btn--primary {
-  @apply block w-full md:w-fit mx-auto bg-l_blue text-white text-center px-10 py-4 rounded-md
+  @apply block w-full md:w-fit mx-auto bg-l_blue text-white text-center px-4 md:px-10 py-4 rounded-md
 }

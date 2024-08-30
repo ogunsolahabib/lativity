@@ -7,6 +7,7 @@ import Recents from "@/components/sections/recents";
 import Reviews from "@/components/sections/reviews";
 import Blog from "@/components/sections/blog";
 import Bannner from "@/components/sections/banner";
+import ProjectForm from "@/components/sections/project-form";
 
 
 
@@ -19,9 +20,8 @@ export default function Home() {
     <main>
       <Hero />
       <Services />
-
       <PreviousWorks />
-
+      <ProjectForm />
       <Recents />
       <Reviews />
       <Blog />
