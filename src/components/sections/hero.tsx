@@ -13,7 +13,7 @@ export default function Hero() {
             <div className="relative w-full md:w-fit">
                 <Image src='/images/hero-image.png' alt='man with laptop' width={500} height={500} />
                 <div className="w-full md:w-11/12 absolute bottom-0 right-0 shadow-[0_0_20px_3px_rgba(0,0,0,0.3)] rounded-lg px-4 md:px-8 py-6 bg-[#9C8F8F] bg-opacity-20 font-bold border-1 border-gray-50">
-                    <div className="flex items-center justify-between">
+                    <div className="grid grid-cols-2 items-center justify-between">
                         <span className="flex gap-1 items-center text-l_blue">
                             <span className="text-2xl md:text-4xl font-semibold">10<sup>+</sup></span>
                             <span className="text-black text-xs md:text-sm"> years  of<br /> experience</span>
