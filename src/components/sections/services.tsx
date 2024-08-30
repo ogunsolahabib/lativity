@@ -24,7 +24,7 @@ export default function Services() {
                 ))}
             </div>
         </div>
-        <RightArcBlue className="hidden md:block absolute top-0 right-0" />
+        <RightArcBlue className="hidden md:block absolute top-[4rem] right-0" />
         <RightArcBlue className="hidden md:block absolute top-[14rem] left-0 -scale-x-100" />
         <RightArcBlue className="hidden md:block absolute bottom-[14rem] left-0 -scale-x-100" />
         <RightArcBlue className="hidden md:block absolute bottom-[8rem] right-0" />
