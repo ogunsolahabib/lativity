@@ -1,4 +1,4 @@
-export default function LeftArcBlue() {
+export default function ArcBlue(props: React.SVGProps<SVGSVGElement>) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -6,10 +6,11 @@ export default function LeftArcBlue() {
             height="286"
             fill="none"
             viewBox="0 0 31 286"
+            {...props}
         >
             <circle
-                cx="-111.667"
-                cy="142.917"
+                cx="142.333"
+                cy="143"
                 r="128.333"
                 stroke="#006"
                 strokeWidth="28"

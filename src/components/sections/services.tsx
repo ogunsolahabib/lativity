@@ -1,5 +1,6 @@
 import Image from "next/image"
 import ServiceCard from "../ui/service-card"
+import RightArcBlue from "../svg/arc-blue"
 
 const services = [{ name: 'Graphic design', image: '/images/services_graphic-design.png', description: 'We offer excellent graphic design services at affordable prices to transform your brand.' },
 { name: 'Printing', image: '/images/services_printing.png', description: 'We offer excellent and quality printing services at affordable prices to transform your brand.' },
@@ -10,18 +11,22 @@ const services = [{ name: 'Graphic design', image: '/images/services_graphic-des
 ]
 
 export default function Services() {
-    return <section className="py-10">
+    return <section className="section relative">
         <div className="section__container">
             <div className="text-center">
                 <h2 className="section__heading--main">What we do?</h2>
                 <h3 className="section__heading--sub">Services we can help you with</h3>
                 {/* <p>We offer excellent digital services at affordable prices to assist you in transforming your brand into a global competitor.</p> */}
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 mt-10 justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 mt-10 md:mt-20 justify-center">
                 {services.map((service) => (
                     <ServiceCard key={service.name} service={service} />
                 ))}
             </div>
         </div>
+        <RightArcBlue className="hidden md:block absolute top-0 right-0" />
+        <RightArcBlue className="hidden md:block absolute top-[14rem] left-0 -scale-x-100" />
+        <RightArcBlue className="hidden md:block absolute bottom-[14rem] left-0 -scale-x-100" />
+        <RightArcBlue className="hidden md:block absolute bottom-[8rem] right-0" />
     </section>
 }

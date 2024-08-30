@@ -68,6 +68,10 @@
   }
 }
 
+.section{
+  @apply py-10 md:py-20 md:px-10;
+}
+
 .section__container {
   @apply container mx-auto;
   }
