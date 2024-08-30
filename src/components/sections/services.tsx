@@ -1,4 +1,5 @@
 import Image from "next/image"
+import ServiceCard from "../ui/service-card"
 
 const services = [{ name: 'Graphic design', image: '/images/services_graphic-design.png', description: 'We offer excellent graphic design services at affordable prices to transform your brand.' },
 { name: 'Printing', image: '/images/services_printing.png', description: 'We offer excellent and quality printing services at affordable prices to transform your brand.' },
@@ -18,14 +19,7 @@ export default function Services() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 mt-10 justify-center">
                 {services.map((service) => (
-                    <div key={service.name} className="flex flex-col">
-                        <div className="w-full h-64 relative">
-                            {/* full width image */}
-                            <Image src={service.image} alt={service.name} fill className="object-cover" />
-                        </div>
-                        <h4 className="card__heading">{service.name}</h4>
-                        <p className="card__description w-full">{service.description}</p>
-                    </div>
+                    <ServiceCard key={service.name} service={service} />
                 ))}
             </div>
         </div>
