@@ -69,7 +69,7 @@
 }
 
 .section{
-  @apply py-10 md:py-20 md:px-10;
+  @apply py-10 md:py-20 md:px-20;
 }
 
 .section__container {

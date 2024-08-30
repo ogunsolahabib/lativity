@@ -2,7 +2,7 @@ import Image from "next/image";
 import LinkButton from "../ui/link-button";
 
 export default function PreviousWorks() {
-    return <section className="py-10">
+    return <section className="section">
         <div className="section__container">
             <div className="text-center">
                 <h2 className="section__heading--main">View our works</h2>

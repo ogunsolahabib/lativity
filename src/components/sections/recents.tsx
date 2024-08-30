@@ -1,7 +1,7 @@
 import ProjectsCarousel from "./ProjectsCarousel";
 
 export default function Recents() {
-    return <section id="recent" className="py-10">
+    return <section id="recent" className="section">
         <div className="section__container">
             <div className="text-center">
                 <h2 className="section__heading--main">Recent works</h2>

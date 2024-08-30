@@ -2,7 +2,7 @@ import Image from "next/image";
 import StarRating from "../ui/star-rating";
 
 export default function Reviews() {
-    return <section id="reviews" className="py-10 bg-[#F8F8FD]">
+    return <section id="reviews" className="section bg-[#F8F8FD]">
         <div className="text-center">
             <h2 className="section__heading--main">Client reviews</h2>
             <p className="section__heading--sub mx-auto w-full md:w-1/2">1000+ satisfied clients comments. Give us details of your work and let’s get started</p>

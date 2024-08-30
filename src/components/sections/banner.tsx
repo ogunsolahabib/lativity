@@ -3,7 +3,7 @@ import BottomBannerShapesRight from "../svg/bottom-banner-shapes-right";
 import DotsInSquareBlue from "../svg/dots-in-square-blue";
 
 export default function Bannner() {
-    return <section id="banner" className="py-10 relative overflow-hidden border-y-[4rem] border-white bg-[#F8F8FD]">
+    return <section id="banner" className="section relative overflow-hidden border-y-[4rem] border-white bg-[#F8F8FD]">
         <DotsInSquareBlue className="absolute -top-12 left-20 w-20 h-20 rotate-45 -z-0" />
         <DotsInSquareBlue className="absolute bottom-2 -right-10 w-20 h-20 -rotate-45 -z-0" />
         <div className="section__container">

@@ -1,7 +1,7 @@
 import BlogArticleCard from "../ui/blog-article-card";
 
 export default function Blog() {
-    return <section id="blog" className="py-10 bg-l_blue text-white">
+    return <section id="blog" className="section bg-l_blue text-white">
         <div className="section__container">
             <div className="text-center">
                 <h2 className="text-xl">News & updates</h2>

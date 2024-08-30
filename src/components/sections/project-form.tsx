@@ -4,7 +4,7 @@ import { Label } from "../ui/label";
 import { Textarea } from "../ui/textarea";
 
 export default function ProjectForm() {
-    return <section id='project-form' className='py-10 bg-l_blue text-white'>
+    return <section id='project-form' className='section bg-l_blue text-white'>
         <div className="section__container w-full md:max-w-[70rem]">
             <h2 className="text-xl text-center">Discuss a project</h2>
             <p className="text-3xl text-center font-bold">Give us details of your work and let’s get started</p>

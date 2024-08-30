@@ -7,7 +7,7 @@ const socialIcons = [{ name: 'Phone', image: '/images/tel-white.png' }, { name: 
 
 export default function Footer() {
     return (
-        <footer className="bg-l_blue text-white py-10 md:py-20">
+        <footer className="section bg-l_blue text-white py-10 md:py-20">
             <div className="section__container grid grid-cols-1 md:grid-cols-4 md:justify-items-center gap-10">
                 <div>
                     <Image src="/images/logo-white.png" alt="logo" width={60} height={60} className="object-cover w-fit mx-auto md:ml-0" />
