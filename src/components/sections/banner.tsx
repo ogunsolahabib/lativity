@@ -14,7 +14,7 @@ export default function Bannner() {
                         <h2 className="section__heading--main">Let&apos;s get started</h2>
                         <p className="text-xl mx-auto w-full md:w-1/2">View our updated blog posts. 1000+ satisfied clients comments.</p>
                     </div>
-                    <a href="#project-form" className="btn--primary">Discuss a project</a>
+                    <a href="#project-form" className="btn--primary mt-10">Discuss a project</a>
                 </div>
                 <BottomBannerShapesRight className="hidden md:block w-1/5 h-auto aspect-[14/10] absolute right-20 top-0 bottom-0" />
             </div>
