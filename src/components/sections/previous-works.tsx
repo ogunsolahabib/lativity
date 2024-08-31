@@ -1,8 +1,8 @@
 import Image from "next/image";
-import LinkButton from "../ui/link-button";
+import Ring from "../svg/ring";
 
 export default function PreviousWorks() {
-    return <section className="section">
+    return <section className="section relative">
         <div className="section__container">
             <div className="text-center">
                 <h2 className="section__heading--main">View our works</h2>
@@ -17,10 +17,11 @@ export default function PreviousWorks() {
                 <h3 className="text-4xl font-bold">We <span className="text-l_blue">design</span>, <span className="text-l_blue">develop</span>, and <span className="text-l_blue">market online</span> for brands.
                 </h3>
                 <p className="text-xl">
-                    We design aesthetically pleasing website, print, and develop mobile app to provide effective solutions for brands.
+                    We design aesthetically pleasing websites, print, and develop mobile app to provide effective solutions for brands.
                 </p>
-                <LinkButton href="#" className="block w-fit">View our works</LinkButton>
+                <a href="#" className="btn--primary block w-fit">View our works</a>
             </div>
         </div>
+        <Ring className="hidden md:block absolute -bottom-56 -right-48 -z-50 text-l_blue" />
     </section>
 }
