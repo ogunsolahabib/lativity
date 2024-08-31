@@ -15,8 +15,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${monteserrat.className} text-l_black overflow-x-hidden`}>{children}</body>
+    <html lang="en" className="scroll-smooth w-full max-w-full overflow-x-hidden">
+      <body className={`${monteserrat.className} text-l_black w-full max-w-full overflow-x-hidden`}>{children}</body>
     </html>
   );
 }

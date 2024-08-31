@@ -73,7 +73,7 @@
 }
 
 .section__container {
-  @apply container mx-auto;
+  @apply container max-w-[66rem] mx-auto;
   }
 .section__heading--main {
     @apply text-xl text-l_blue;
