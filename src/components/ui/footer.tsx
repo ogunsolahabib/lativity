@@ -16,12 +16,12 @@ export default function Footer() {
 
                 {footerLinks.map(group => <div key={group.heading} className="">
                     <h4 className="font-bold">{group.heading}</h4>
-                    <ul className="mt-2">{group.links.map(link => <li><a href={link.url}>{link.name}</a></li>)}</ul></div>)
+                    <ul className="mt-2">{group.links.map(link => <li key={link.name}><a href={link.url}>{link.name}</a></li>)}</ul></div>)
                 }
                 <div>
                     <h4 className="font-bold">Get in touch</h4>
                     <ul className="mt-2 flex gap-2">
-                        {socialIcons.map(icon => <li key={icon.name} style={{ '--icon-image': `url(${icon.image})` }} className={`flex items-center gap-2 bg-[image:var(--icon-image)] text-transparent bg-[length:2rem_2rem] w-8 h-8`}>{icon.name}</li>)}
+                        {socialIcons.map(icon => <li key={icon.name} style={{ '--icon-image': `url(${icon.image})` } as any} className={`flex items-center gap-2 bg-[image:var(--icon-image)] text-transparent bg-[length:2rem_2rem] w-8 h-8`}>{icon.name}</li>)}
                     </ul>
                 </div>
             </div>
