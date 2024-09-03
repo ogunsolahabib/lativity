@@ -1,14 +1,15 @@
+import Ring from "../svg/ring";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
 import { Textarea } from "../ui/textarea";
 
 export default function ProjectForm() {
-    return <section id='project-form' className='section bg-l_blue text-white'>
-        <div className="section__container w-full md:max-w-[70rem]">
+    return <section id='project-form' className='section relative bg-l_blue text-white'>
+        <div className="section__container w-full md:max-w-[70rem] relative z-50">
             <h2 className="text-xl text-center">Discuss a project</h2>
             <p className="text-3xl text-center font-bold">Give us details of your work and let’s get started</p>
-            <form className="mt-10">
+            <form className="my-20">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center mx-auto">
                     <Label htmlFor="name">
                         <div className="mb-2">Name</div>
@@ -29,11 +30,13 @@ export default function ProjectForm() {
                 </div>
                 <Label htmlFor="message" className="block mt-6">
                     <div className="mb-2">Message</div>
-                    <Textarea className="w-full" name="message" id="message" placeholder="Your message">
+                    <Textarea className="w-full" name="message" id="message" placeholder="Your message" rows={10}>
                     </Textarea>
                 </Label>
                 <Button className="bg-l_gold hover:bg-l_gold block mt-10 mx-auto w-full md:w-80" type="submit">Submit</Button>
             </form>
         </div>
+
+        <Ring className="hidden md:block absolute bottom-6 -left-24 w-96 h-96 text-white -z-0" />
     </section>
 }

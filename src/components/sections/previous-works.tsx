@@ -22,6 +22,6 @@ export default function PreviousWorks() {
                 <a href="#" className="btn--primary block w-fit">View our works</a>
             </div>
         </div>
-        <Ring className="hidden md:block absolute -bottom-56 -right-48 -z-50 text-l_blue" />
+        <Ring className="hidden md:block absolute -bottom-48 -right-24 w-96 h-96 text-l_blue -z-50" />
     </section>
 }
