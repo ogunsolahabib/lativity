@@ -1,11 +1,12 @@
 import BottomBannerShapesLeft from "../svg/bottom-banner-shapes-left";
 import BottomBannerShapesRight from "../svg/bottom-banner-shapes-right";
-import DotsInSquareBlue from "../svg/dots-in-square-blue";
+import DotsInSquare from "../svg/dots-in-square-blue";
+
 
 export default function Bannner() {
     return <section id="banner" className="section relative overflow-hidden border-y-[4rem] border-white bg-[#F8F8FD]">
-        <DotsInSquareBlue className="absolute -top-12 left-20 w-20 h-20 rotate-45 -z-0" />
-        <DotsInSquareBlue className="absolute bottom-2 -right-10 w-20 h-20 -rotate-45 -z-0" />
+        <DotsInSquare className="absolute -top-12 left-20 w-20 h-20 rotate-45 -z-0 text-l_blue" />
+        <DotsInSquare className="absolute bottom-2 -right-10 w-20 h-20 -rotate-45 -z-0 text-l_blue" />
         <div className="section__container">
             <div className="relative">
                 <BottomBannerShapesLeft className="hidden md:block w-1/5 h-auto aspect-[13/10] absolute left-20 top-0 bottom-0" />

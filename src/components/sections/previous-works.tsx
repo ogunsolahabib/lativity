@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Ring from "../svg/ring";
+import DotsInSquare from "../svg/dots-in-square-blue";
 
 export default function PreviousWorks() {
     return <section className="section relative">
@@ -23,5 +24,6 @@ export default function PreviousWorks() {
             </div>
         </div>
         <Ring className="hidden md:block absolute -bottom-48 -right-24 w-96 h-96 text-l_blue -z-50" />
+        <DotsInSquare className="hidden md:block absolute -top-6 -left-0 w-[12vw] h-[12vw]  -z-0 text-l_blue" />
     </section>
 }
