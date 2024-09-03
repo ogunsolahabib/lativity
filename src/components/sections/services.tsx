@@ -18,7 +18,7 @@ export default function Services() {
                 <h3 className="section__heading--sub">Services we can help you with</h3>
                 {/* <p>We offer excellent digital services at affordable prices to assist you in transforming your brand into a global competitor.</p> */}
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 mt-10 md:mt-20 justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 md:mt-20 justify-center">
                 {services.map((service) => (
                     <ServiceCard key={service.name} service={service} />
                 ))}
