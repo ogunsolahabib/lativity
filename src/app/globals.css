@@ -79,7 +79,7 @@
     @apply text-xl text-l_blue;
   }
 .section__heading--sub {
-    @apply text-3xl text-l_black font-semibold;
+    @apply text-2xl lg:text-3xl text-l_black font-semibold;
   }
   
 .card__heading {
